@@ -1,0 +1,38 @@
+# 服务配置
+server:
+  address: localhost     # 服务器地址
+  port: 8080             # 服务器端口
+  servlet:
+    context-path: /
+
+spring:
+  # 数据源配置
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource # 数据库连接池类型，这里使用阿里巴巴的Druid连接池
+    url: jdbc:mysql://localhost:3306/amazing_shop?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai # 数据库连接URL
+    username: root       # 数据库用户名
+    password: root       # 数据库密码
+  mvc:
+    view:
+      prefix: /WEB-INF/views/ # 视图文件的前缀，例如：/WEB-INF/views/index.jsp 对应的逻辑视图名为 'index'
+      suffix: .jsp
+
+#mybatis-plus配置
+mybatis-plus:
+  type-enums-package: icu.chiou.entity          # 枚举类所在的包路径
+  mapper-locations: classpath:/mapper/*.xml     # MyBatis映射文件的位置
+  configuration:
+    map-underscore-to-camel-case: true          # 是否将数据库表字段的下划线命名转为驼峰命名
+
+#日志配置
+logging:
+  level:
+    icu.chiou.mapper: debug                     # 设置icu.chiou.mapper包下的日志级别为debug
+
+#图片配置
+amazing-shop:
+  local:
+    basePath: D://AmazingShop
+  cloud:
+    qiniu:
+      url: xxxx

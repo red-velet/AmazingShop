@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="icu.chiou.mapper.ContentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="icu.chiou.entity.ContentEntity">
+        <id column="id" property="id"/>
+        <result column="created" property="created"/>
+        <result column="updated" property="updated"/>
+        <result column="category_id" property="categoryId"/>
+        <result column="title" property="title"/>
+        <result column="sub_title" property="subTitle"/>
+        <result column="title_desc" property="titleDesc"/>
+        <result column="url" property="url"/>
+        <result column="pic" property="pic"/>
+        <result column="pic2" property="pic2"/>
+        <result column="content" property="content"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        created
+        ,
+        updated,
+        id, category_id, title, sub_title, title_desc, url, pic, pic2, content
+    </sql>
+
+</mapper>
