@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="icu.chiou.mapper.ItemParamItemMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="icu.chiou.entity.ItemParamItemEntity">
+        <id column="id" property="id"/>
+        <result column="created" property="created"/>
+        <result column="updated" property="updated"/>
+        <result column="item_id" property="itemId"/>
+        <result column="param_data" property="paramData"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        created
+        ,
+        updated,
+        id, item_id, param_data
+    </sql>
+
+</mapper>

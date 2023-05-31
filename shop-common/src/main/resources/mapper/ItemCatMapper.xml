@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="icu.chiou.mapper.ItemCatMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="icu.chiou.entity.ItemCatEntity">
+        <id column="id" property="id"/>
+        <result column="created" property="created"/>
+        <result column="updated" property="updated"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="name" property="name"/>
+        <result column="status" property="status"/>
+        <result column="sort_order" property="sortOrder"/>
+        <result column="is_parent" property="isParent"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        created
+        ,
+        updated,
+        id, parent_id, name, status, sort_order, is_parent
+    </sql>
+
+</mapper>
